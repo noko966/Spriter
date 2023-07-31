@@ -6,7 +6,9 @@ import os
 image_dir = './images'
 sprite_dir = './Input/spriteTournament1.png'
 css_file_dir = './Input/spriteTournament.css'
-output_dir = './Output/spriteTournament.png'
+output_sprite_dir = './Output/spriteTournament.png'
+output_css_file_dir = './Output/spriteTournament.css'
+
 
 
 
@@ -71,10 +73,10 @@ for i, (filename, img) in enumerate(images_dict.items()):
     stylesheet.add(rule)
 
 # Save the sprite
-combined.save(output_dir)
+combined.save(output_sprite_dir)
 
 # Write the CSS to a file
-with open(css_file_dir, 'a') as css_file:
+with open(output_css_file_dir, 'a') as css_file:
     css_file.write(stylesheet.cssText.decode())
 
 
